@@ -29,4 +29,4 @@ Our services are not targeted to minors. We do not knowingly collect or store pe
 
 We reserve the right to modify this privacy policy at any time and without prior notice. All changes take effect immediately when they are published on this website.
 
-A full history of changes to this privacy policy may be found [here](https://github.com/OldSneerJaw/borealis-data-www/commits/main/index.md).
+A full history of changes to this privacy policy may be found [here](https://github.com/OldSneerJaw/borealis-data-www/commits/main/privacy.md).
