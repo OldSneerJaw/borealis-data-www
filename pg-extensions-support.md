@@ -16,7 +16,7 @@ The following list of [Postgres extensions](https://www.postgresql.org/docs/10/e
 - [fuzzystrmatch](https://www.postgresql.org/docs/13/fuzzystrmatch.html)
 - [hll](https://github.com/citusdata/postgresql-hll)
 - [hstore](https://www.postgresql.org/docs/13/hstore.html)
-- [hstore_plperl](https://www.postgresql.org/docs/13/hstore.html)
+- [hstore_plperl](https://www.postgresql.org/docs/13/hstore.html#id-1.11.7.25.11)
 - [intagg](https://www.postgresql.org/docs/13/intagg.html)
 - [intarray](https://www.postgresql.org/docs/13/intarray.html)
 - [ip4r](https://github.com/RhodiumToad/ip4r)
