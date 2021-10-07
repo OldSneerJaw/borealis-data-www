@@ -65,8 +65,8 @@ A list of Postgres extensions that are supported by Borealis Isolated Postgres m
 
 By default, the `borealis-pg:run` command executes given commands as the Heroku application's database user, but it can be made to execute its commands as a personal user (i.e. a database user that is tied to the current Heroku CLI user account) instead by including the `--personal-user` flag. The `borealis-pg:tunnel` command always runs as a personal user, though. In either case, if creating tables, indexes, views or other objects as a personal user, the corresponding objects will be owned by that personal user unless/until explicitly reassigned. To reassign every object owned by the current user to the application's read/write user, you can execute the following SQL (assuming the application user's name is `app_rw_102719c813b42c81eb94f6b441784828`):
 
-```postgresql
-REASSIGN OWNED BY CURRENT_USER TO app_rw_102719c813b42c81eb94f6b441784828
+```pgsql
+REASSIGN OWNED BY CURRENT_USER TO app_rw_102719c813b42c81eb94f6b441784828;
 ```
 
 Under most circumstances, the Heroku CLI will periodically check for updates and keep the borealis-pg-cli plugin up to date automatically as new releases are published, but you can force it to update the plugin at any time as follows on the command line:
