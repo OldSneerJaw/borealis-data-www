@@ -33,27 +33,27 @@ You can use `heroku help` to see the documentation for any command or sub-comman
 heroku help borealis-pg:extensions:install
 ```
 
-To start an interactive secure tunnel session for an add-on database, use the `borealis-pg:tunnel` command. For example, to connect with a personal user with read-only access to an add-on database attached to the Heroku app `sushi` with an attachment name of `DATABASE`, you might execute the following:
+To start a secure tunnel session for an add-on database, use the `borealis-pg:tunnel` command. For example, to connect with a dedicated personal user with read-only access to an add-on database that is attached to the Heroku app `sushi` using an attachment name of `DATABASE`, you can execute the following:
 
 ```shell
-heroku borealis-pg:tunnel --app sushi --addon DATABASE
+heroku borealis-pg:tunnel --app sushi --addon DATABASE_URL
 ```
 
-Or, to connect with a personal user that has both read and write access (use with caution!) to an add-on database attached as `BOREALIS_PG` to the Heroku app `sushi`:
+Or, to connect with a dedicated personal user that has both read and write access to the same add-on database:
 
 ```shell
-heroku borealis-pg:tunnel --app sushi --addon BOREALIS_PG_URL --write-access
+heroku borealis-pg:tunnel --app sushi --addon DATABASE --write-access
 ```
 
-Once the session has started, you can use a tool like [pgAdmin](https://www.pgadmin.org/) to interact with the database using the credentials provided in the `borealis-pg:tunnel` command's output.
+Once the session has started, you can use a tool like [psql](https://www.postgresql.org/docs/current/app-psql.html) or [pgAdmin](https://www.pgadmin.org/) to interact with the database using the credentials provided in the `borealis-pg:tunnel` command's output.
 
-To execute non-interactive commands (e.g. database migrations) as the Heroku application database user, use the `borealis-pg:run` command. For example, to execute the database migrations for a Python Django Framework application, you might run:
+To execute non-interactive commands (e.g. database migrations) as the Heroku application database user, use the `borealis-pg:run` command. For example, to execute the database migrations for a Ruby on Rails application, you can run:
 
 ```shell
-heroku borealis-pg:run --app sushi --addon DATABASE --shell-cmd './manage.py migrate' --write-access
+heroku borealis-pg:run --app sushi --addon DATABASE --shell-cmd 'rake db:migrate' --write-access
 ```
 
-Alternatively, to execute raw SQL non-interactively on an add-on database:
+Alternatively, to execute raw SQL non-interactively from a file using the same add-on database:
 
 ```shell
 heroku borealis-pg:run --app sushi --addon DATABASE --db-cmd-file './prepopulate.sql' --write-access
