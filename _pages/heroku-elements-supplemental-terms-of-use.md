@@ -1,0 +1,20 @@
+---
+title: Borealis Heroku Elements Supplemental Terms of Use
+description: Terms of use for Heroku Elements that are maintained by Borealis Data Solutions
+---
+
+_Effective 2021-07-26_
+
+## 1. General Terms
+
+**1.1 Scope, Definitions.** Your use of any add-on, buildpack, or button provided by Borealis Data Solutions ("**Borealis**") on the Heroku Elements Marketplace in connection with the Heroku Services (the "**Heroku Elements**") is governed by the [default Heroku Elements Terms of Use](https://www.heroku.com/policy/heroku-elements-terms) (the "**Default Terms**"), except where these Borealis Heroku Elements Supplemental Terms of Use (the "**Supplemental Terms**") conflict with the Default Terms, in which case the Supplemental Terms shall prevail. The "**Specific Terms of Use**" means the collective terms and conditions from these Supplemental Terms and the Default Terms taken together as one binding agreement between you and Borealis. "**Provider**" means Borealis as the entity that offers a particular Heroku Elements on the Heroku Elements Marketplace. "**Heroku Elements Marketplace**" means the online directory, catalog or marketplace of Heroku Elements that interoperate with the Heroku Services, located at https://elements.heroku.com/ or such other URL provided by SFDC. The "**Heroku Services**" means the Heroku products and services that are ordered by you under an Order Form and made available online by SFDC, as described in the Documentation, pursuant to the applicable master subscription agreement between you and SFDC for the use of such services ("**Salesforce Master Subscription Agreement**").
+
+**1.2 Terms between You and Provider.** You acknowledge for each Heroku Elements you subscribe to, purchase, install or use, (a) the Specific Terms of Use constitute a separate binding agreement solely between you and the Provider of such Heroku Elements, and (b) SFDC is not a party to the Specific Terms of Use. Your use of the Heroku Elements requires your agreement to the Specific Terms of Use, and your subscription to, purchase, installation, or use of any Heroku Elements constitutes your agreement to the Specific Terms of Use. If you do not agree to or do not have the authority to agree to the Specific Terms of Use, then you are not permitted to subscribe to, purchase, install or use the Heroku Elements. If you are accepting the Specific Terms of Use on behalf of a company or other legal entity, you represent that you have the authority to bind such entity and its affiliates to the Specific Terms of Use. You must not accept the Specific Terms of Use nor access the Heroku Elements Marketplace or use the Heroku Command Line Interface unless you have such authority.
+
+## 2. Additional Terms
+
+**2.1. Data Retention.** Upon expiration or termination of a Heroku Elements, Provider will promptly delete any data submitted by you to the corresponding Heroku Elements, except where strictly required by law to do otherwise. As such, any data submitted by you to the Heroku Elements will no longer be available to you for export or download after expiration or termination of the Heroku Elements.
+
+**2.2 Governing Law, Venue.** The Specific Terms of Use are governed by the laws of the Province of British Columbia, Canada without regard to its conflict of laws principles. You and Provider agree to submit to the exclusive jurisdiction of the courts located within the City of Vancouver, British Columbia to resolve any legal matter arising from the Specific Terms of Use.
+
+**2.3 Future Updates to the Terms.** Provider reserves the right to modify the Specific Terms of Use at any time and without prior notice to you. A full history of changes to these Supplemental Terms may be found [here](https://github.com/OldSneerJaw/borealis-data-www/commits/main/heroku-elements-supplemental-terms-of-use.md).

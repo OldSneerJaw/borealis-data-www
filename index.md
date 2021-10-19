@@ -1,3 +1,8 @@
-# Welcome
+---
+title: Home
+layout: default
+description: Borealis Data Solutions provides secure data integrations for your Heroku apps
+---
 
-Stay tuned. We're launching soon.
+<br />
+{% include components/features/actual.html %}
