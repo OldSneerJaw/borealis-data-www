@@ -4,5 +4,5 @@ layout: default
 description: Borealis Data Solutions provides secure data integrations for your Heroku apps
 ---
 
-<br />
-{% include components/features/actual.html %}
+<div class="pb-2"><!-- Empty header section --></div>
+{% include components/features/feature-summary.html %}

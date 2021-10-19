@@ -79,7 +79,8 @@
     {% endif %}
     {% endif %}
 
-    <div id="main" class="container">
+    <!-- Apply the container class on the content for every page except the index -->
+    {% if page.url == "/" %}<div id="main">{% else %}<div id="main" class="container">{% endif %}
       {{content}}
     </div>
   </div>
