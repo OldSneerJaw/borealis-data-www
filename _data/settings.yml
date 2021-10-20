@@ -30,11 +30,10 @@ blog_settings:
 menu_settings:
   menu_items:
     - title: 'Home'
-      submenu_items:
       url: /
     - title: 'About'
       url: '/about'
-    - title: 'Privacy Policy'
+    - title: 'Privacy'
       url: '/privacy'
 
 footer_settings:

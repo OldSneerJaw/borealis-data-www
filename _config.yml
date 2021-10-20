@@ -13,19 +13,16 @@ collections:
     type: "post"
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
