@@ -1,14 +1,15 @@
 ---
-title: Borealis Isolated Postgres - Supported Extensions
+title: Borealis Isolated Postgres
+subtitle: Supported PostgreSQL Extensions
 description: Supported PostgreSQL extensions for the Borealis Isolated Postgres add-on
 ---
 
-The following list of [Postgres extensions](https://www.postgresql.org/docs/10/extend-how.html) are supported by [Borealis Isolated Postgres](https://elements.heroku.com/addons/borealis-pg) add-on databases. Use the [borealis-pg-cli](https://www.npmjs.com/package/borealis-pg-cli) utility to install or remove extensions for an add-on database.
+The following list of [PostgreSQL extensions](https://www.postgresql.org/docs/10/extend-how.html) are supported by [Borealis Isolated Postgres](https://elements.heroku.com/addons/borealis-pg) add-on databases. Use the [borealis-pg-cli](https://www.npmjs.com/package/borealis-pg-cli) utility to install or remove extensions for an add-on database.
 
 - [address_standardizer](https://postgis.net/docs/manual-3.0/Address_Standardizer.html)
 - [address_standardizer_data_us](https://postgis.net/docs/manual-3.0/Address_Standardizer.html)
 - [bloom](https://www.postgresql.org/docs/13/bloom.html)
-- [bool_plperl](https://www.postgresql.org/docs/13/plperl-funcs.html) (not available on Postgres 10, 11 and 12)
+- [bool_plperl](https://www.postgresql.org/docs/13/plperl-funcs.html) (not available on PostgreSQL 10, 11 and 12)
 - [btree_gin](https://www.postgresql.org/docs/13/btree-gin.html)
 - [btree_gist](https://www.postgresql.org/docs/13/btree-gist.html)
 - [citext](https://www.postgresql.org/docs/13/citext.html)
@@ -24,9 +25,9 @@ The following list of [Postgres extensions](https://www.postgresql.org/docs/10/e
 - [intarray](https://www.postgresql.org/docs/13/intarray.html)
 - [ip4r](https://github.com/RhodiumToad/ip4r)
 - [isn](https://www.postgresql.org/docs/13/isn.html)
-- [jsonb_plperl](https://www.postgresql.org/docs/13/datatype-json.html#id-1.5.7.22.19) (not available on Postgres 10)
+- [jsonb_plperl](https://www.postgresql.org/docs/13/datatype-json.html#id-1.5.7.22.19) (not available on PostgreSQL 10)
 - [ltree](https://www.postgresql.org/docs/13/ltree.html)
-- [pg_bigm](https://pgbigm.osdn.jp/pg_bigm_en-1-2.html) (not available on Postgres 10)
+- [pg_bigm](https://pgbigm.osdn.jp/pg_bigm_en-1-2.html) (not available on PostgreSQL 10)
 - [pg_freespacemap](https://www.postgresql.org/docs/13/pgfreespacemap.html)
 - [pg_similarity](https://github.com/eulerto/pg_similarity)
 - [pg_stat_statements](https://www.postgresql.org/docs/13/pgstatstatements.html)
@@ -36,7 +37,7 @@ The following list of [Postgres extensions](https://www.postgresql.org/docs/10/e
 - [pgrouting](https://docs.pgrouting.org/3.1/en/index.html)
 - [pgrowlocks](https://www.postgresql.org/docs/13/pgrowlocks.html)
 - [pgstattuple](https://www.postgresql.org/docs/13/pgstattuple.html)
-- [pgtap](https://pgtap.org/) (not available on Postgres 10)
+- [pgtap](https://pgtap.org/) (not available on PostgreSQL 10)
 - [plcoffee](https://github.com/plv8/plv8/blob/v2.3.15/doc/plv8.md#coffeescript-example)
 - [plls](https://github.com/plv8/plv8/blob/v2.3.15/doc/plv8.md#livescript-example)
 - [plperl](https://www.postgresql.org/docs/13/plperl.html)
@@ -44,7 +45,7 @@ The following list of [Postgres extensions](https://www.postgresql.org/docs/10/e
 - [pltcl](https://www.postgresql.org/docs/13/pltcl.html)
 - [plv8](https://github.com/plv8/plv8)
 - [postgis](https://www.postgis.net/docs/manual-3.0/)
-- [postgis_raster](https://www.postgis.net/docs/manual-3.0/using_raster_dataman.html) (not available on Postgres 10 and 11)
+- [postgis_raster](https://www.postgis.net/docs/manual-3.0/using_raster_dataman.html) (not available on PostgreSQL 10 and 11)
 - [prefix](https://github.com/dimitri/prefix)
 - [rdkit](https://www.rdkit.org/docs/Cartridge.html)
 - [sslinfo](https://www.postgresql.org/docs/13/sslinfo.html)

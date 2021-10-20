@@ -6,7 +6,7 @@ description: Instructions for managing a Borealis Isolated Postgres add-on
 
 [Borealis Isolated Postgres](https://elements.heroku.com/addons/borealis-pg) add-ons can be managed with the [borealis-pg-cli](https://www.npmjs.com/package/borealis-pg-cli) plugin for the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
-Each add-on database is deliberately isolated from the open internet in a virtual private cloud, which makes it impossible to access the database directly. Therefore, borealis-pg-cli may be used to create a secure tunnel to an add-on database to perform ad hoc SQL queries, run database migration scripts and manage Postgres extensions. The following describes the use of borealis-pg-cli.
+Each add-on database is deliberately isolated from the open internet in a virtual private cloud, which makes it impossible to access the database directly. Therefore, borealis-pg-cli may be used to create a secure tunnel to an add-on database to perform ad hoc SQL queries, run database migration scripts and manage PostgreSQL extensions. The following describes the use of borealis-pg-cli.
 
 ## Pre-requisites
 
@@ -31,7 +31,7 @@ When installation is complete, execute the following to see the root documentati
 $ heroku help borealis-pg
 ```
 
-You can use `heroku help` to see the documentation for any command or sub-command. For example, for help with the command that installs Postgres extensions:
+You can use `heroku help` to see the documentation for any command or sub-command. For example, for help with the command that installs PostgreSQL extensions:
 
 ```shell
 $ heroku help borealis-pg:extensions:install
@@ -65,7 +65,7 @@ $ heroku borealis-pg:run --app sushi --addon DATABASE --db-cmd-file './prepopula
 
 ## Notes
 
-A list of Postgres extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support.md).
+A list of PostgreSQL extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support.md).
 
 By default, the `borealis-pg:run` command executes given commands as the Heroku application's database user, but it can be made to execute its commands as a personal user (i.e. a database user that is tied to the current Heroku CLI user account) instead by including the `--personal-user` flag. The `borealis-pg:tunnel` command always runs as a personal user, though. In either case, if creating tables, indexes, views or other objects as a personal user, the corresponding objects will be owned by that personal user unless/until explicitly reassigned. To reassign every object owned by the current user to the application's read/write user, you can execute the following SQL (assuming the application user's name is `app_rw_102719c813b42c81eb94f6b441784828`):
 
