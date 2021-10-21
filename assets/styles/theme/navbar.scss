@@ -45,6 +45,17 @@
     }
 }
 
+.navbar-collapse-header {
+    .navbar-brand {
+        color: $gray-800;
+
+        &:hover,
+        &:focus {
+            color: $gray-800;
+        }
+    }
+}
+
 .navbar-nav {
   .nav-item {
     .media:not(:last-child){
