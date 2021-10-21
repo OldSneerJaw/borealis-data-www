@@ -35,6 +35,8 @@ menu_settings:
       url: '/about'
     - title: 'Privacy'
       url: '/privacy'
+    - title: 'Status'
+      url: 'https://borealis.instatus.com/'
 
 footer_settings:
   footer_tagline: Secure data integrations for Heroku
