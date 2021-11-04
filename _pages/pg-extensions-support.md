@@ -6,8 +6,8 @@ description: Supported PostgreSQL extensions for the Borealis Isolated Postgres 
 
 The following list of [PostgreSQL extensions](https://www.postgresql.org/docs/10/extend-how.html) are supported by [Borealis Isolated Postgres](https://elements.heroku.com/addons/borealis-pg) add-on databases. Use the [borealis-pg-cli](https://www.npmjs.com/package/borealis-pg-cli) utility to install or remove extensions for an add-on database.
 
-- [address_standardizer](https://postgis.net/docs/manual-3.0/Address_Standardizer.html)
-- [address_standardizer_data_us](https://postgis.net/docs/manual-3.0/Address_Standardizer.html)
+- [address_standardizer](https://postgis.net/docs/manual-3.1/Address_Standardizer.html)
+- [address_standardizer_data_us](https://postgis.net/docs/manual-3.1/Address_Standardizer.html)
 - [bloom](https://www.postgresql.org/docs/13/bloom.html)
 - [bool_plperl](https://www.postgresql.org/docs/13/plperl-funcs.html) (not available on PostgreSQL 10, 11 and 12)
 - [btree_gin](https://www.postgresql.org/docs/13/btree-gin.html)
@@ -44,8 +44,8 @@ The following list of [PostgreSQL extensions](https://www.postgresql.org/docs/10
 - [plpgsql](https://www.postgresql.org/docs/13/plpgsql.html)
 - [pltcl](https://www.postgresql.org/docs/13/pltcl.html)
 - [plv8](https://github.com/plv8/plv8)
-- [postgis](https://www.postgis.net/docs/manual-3.0/)
-- [postgis_raster](https://www.postgis.net/docs/manual-3.0/using_raster_dataman.html) (not available on PostgreSQL 10 and 11)
+- [postgis](https://www.postgis.net/docs/manual-3.1/)
+- [postgis_raster](https://www.postgis.net/docs/manual-3.1/using_raster_dataman.html) (not available on PostgreSQL 10 and 11)
 - [prefix](https://github.com/dimitri/prefix)
 - [rdkit](https://www.rdkit.org/docs/Cartridge.html)
 - [sslinfo](https://www.postgresql.org/docs/13/sslinfo.html)
