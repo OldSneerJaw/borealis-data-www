@@ -65,7 +65,7 @@ $ heroku borealis-pg:run --app sushi --addon DATABASE --db-cmd-file './prepopula
 
 ## Notes
 
-A list of PostgreSQL extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support.md).
+A list of PostgreSQL extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support).
 
 By default, the `borealis-pg:run` command executes given commands as the Heroku application's database user, but it can be made to execute its commands as a personal user (i.e. a database user that is tied to the current Heroku CLI user account) instead by including the `--personal-user` flag. The `borealis-pg:tunnel` command always runs as a personal user, though. In either case, if creating tables, indexes, views or other objects as a personal user, the corresponding objects will be owned by that personal user unless/until explicitly reassigned. To reassign every object owned by the current user to the application's read/write user, you can execute the following SQL (assuming the application user's name is `app_rw_102719c813b42c81eb94f6b441784828`):
 
