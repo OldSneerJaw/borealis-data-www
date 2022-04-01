@@ -22,7 +22,7 @@ Heroku Add-on(s):
 Website (borealis-data.com and its subdomains):
 * [GitHub Pages](https://pages.github.com/): This website is hosted on GitHub Pages, which may collect and store your personal information according to [GitHub's privacy policy](https://docs.github.com/en/github/site-policy/github-privacy-statement).
 
-We may disclose your personal information only if we are required to do so by law or if you are in violation of the [Terms of Use](https://www.heroku.com/policy/heroku-elements-terms) of our Heroku Add-on(s). We do not sell or otherwise share your personal information with anyone else for any reason other than those reasons already stated in this policy.
+We may disclose your personal information only if we are required to do so by law or if you are in violation of the [Terms of Use](https://www.borealis-data.com/heroku-elements-supplemental-terms-of-use) of our Heroku Add-on(s). We do not sell or otherwise share your personal information with anyone else for any reason other than those reasons already stated in this policy.
 
 ## Personal information of minors
 
