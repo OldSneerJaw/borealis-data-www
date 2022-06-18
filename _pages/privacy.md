@@ -3,12 +3,12 @@ title: Privacy Policy
 description: Privacy policy
 ---
 
-Last updated: 2022-03-31
+Last updated: 2022-06-17
 
 ## Personal information we collect and store
 
 * Cookies: We may store cookies on your device(s) for authentication purposes only when you make use of [Heroku Add-on Single Sign-on](https://devcenter.heroku.com/articles/add-on-single-sign-on) for our Heroku Add-on(s).
-* Email addresses: The email address associated with your Heroku user account may be used for the purposes of notifying you of important operational events related to your use of our Heroku Add-on(s) (for example, warning of upcoming service maintenance, storage usage alerts, failures of automated processes, etc.) and to solicit occasional feedback on your experience with our Heroku Add-on(s) (we promise to do so sparingly). Generally, whenever we need to contact you, we request your email address just in time from Heroku's API, send the email and then remove the email address from volatile memory shortly afterward without storing it in a nonvolatile storage medium (for example, a hard disk drive, solid state drive, etc.). However, when you first provision our Heroku Add-on(s), we do temporarily store your email address for up to 48 hours, after which it will be purged from any storage medium it was stored in.
+* Email addresses: The email address associated with your Heroku user account may be used for the purposes of notifying you of important operational events related to your use of our Heroku Add-on(s) (for example, warning of upcoming service maintenance, storage usage alerts, failures of automated processes, etc.) and to solicit occasional feedback on your experience with our Heroku Add-on(s) (we promise to do so sparingly).
 
 ## Third party services we use
 
