@@ -14,6 +14,7 @@ These utilities are required to proceed:
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+- [psql](https://www.postgresql.org/download/) (required only for the `borealis-pg:psql` command)
 
 ## Getting started
 
@@ -37,19 +38,25 @@ You can use `heroku help` to see the documentation for any command or sub-comman
 $ heroku help borealis-pg:extensions:install
 ```
 
-To start a secure tunnel session for an add-on database, use the `borealis-pg:tunnel` command. For example, to connect with a dedicated personal user with read-only access to an add-on database that is attached to the Heroku app `sushi` using an attachment name of `DATABASE`, you can execute the following:
+To connect securely to an add-on database using [psql](https://www.postgresql.org/docs/current/app-psql.html), use the `borealis-pg:psql` command. For example:
 
 ```shell
-$ heroku borealis-pg:tunnel --app sushi --addon DATABASE_URL
+$ heroku borealis-pg:psql --app sushi --addon DATABASE
 ```
 
-Or, to connect with a dedicated personal user that has both read and write access to the same add-on database:
+To start a persistent secure tunnel session for an add-on database, use the `borealis-pg:tunnel` command. For example, to connect with a dedicated personal user with read-only access to an add-on database that is attached to the Heroku app `sushi` using an attachment name of `DATABASE`, you can execute the following:
+
+```shell
+$ heroku borealis-pg:tunnel --app sushi --addon DATABASE
+```
+
+Or, for a persistent secure tunnel with a dedicated personal user that has both read and write access to the same add-on database:
 
 ```shell
 $ heroku borealis-pg:tunnel --app sushi --addon DATABASE --write-access
 ```
 
-Once the session has started, you can use a tool like [psql](https://www.postgresql.org/docs/current/app-psql.html) or [pgAdmin](https://www.pgadmin.org/) to interact with the database using the credentials provided in the `borealis-pg:tunnel` command's output.
+Once the session has started, you can use a tool like [pgAdmin](https://www.pgadmin.org/) to interact with the database using the credentials provided in the `borealis-pg:tunnel` command's output.
 
 To execute non-interactive commands (e.g. database migrations) as the Heroku application database user, use the `borealis-pg:run` command. For example, to execute the database migrations for a Ruby on Rails application, you can run:
 
@@ -67,7 +74,7 @@ $ heroku borealis-pg:run --app sushi --addon DATABASE --db-cmd-file './prepopula
 
 A list of PostgreSQL extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support).
 
-By default, the `borealis-pg:run` command executes given commands as the Heroku application's database user, but it can be made to execute its commands as a personal user (i.e. a database user that is tied to the current Heroku CLI user account) instead by including the `--personal-user` option. The `borealis-pg:tunnel` command always runs as a personal user, though. In either case, if creating tables, indexes, views or other objects as a personal user, the corresponding objects will be owned by that personal user unless/until explicitly reassigned. To reassign every object owned by the current user to the application's read/write user, you can execute the following SQL (assuming the application user's name is `app_rw_0123456789abcdef`):
+By default, the `borealis-pg:run` command executes given commands as the Heroku application's database user, but it can be made to execute its commands as a personal user (i.e. a database user that is tied to the current Heroku CLI user account) instead by including the `--personal-user` option. The `borealis-pg:psql` and `borealis-pg:tunnel` commands always run as a personal user, though. In any case, if creating tables, indexes, views or other objects as a personal user, the corresponding objects will be owned by that personal user unless/until explicitly reassigned. To reassign every object owned by the current user to the application's read/write user, you can execute the following SQL (assuming the application user's name is `app_rw_0123456789abcdef`):
 
 ```sql
 REASSIGN OWNED BY CURRENT_USER TO app_rw_0123456789abcdef;
