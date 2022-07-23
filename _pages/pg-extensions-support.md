@@ -28,6 +28,7 @@ The following list of [PostgreSQL extensions](https://www.postgresql.org/docs/10
 - [ip4r](https://github.com/RhodiumToad/ip4r)
 - [isn](https://www.postgresql.org/docs/13/isn.html)
 - [jsonb_plperl](https://www.postgresql.org/docs/13/datatype-json.html#id-1.5.7.22.19) (not available on PostgreSQL 10)
+- [lo](https://www.postgresql.org/docs/13/lo.html)
 - [ltree](https://www.postgresql.org/docs/13/ltree.html)
 - [moddatetime](https://www.postgresql.org/docs/13/contrib-spi.html#id-1.11.7.45.8) (not available on PostgreSQL 10, 11 and 12)
 - [pg_bigm](https://pgbigm.osdn.jp/pg_bigm_en-1-2.html) (not available on PostgreSQL 10)
