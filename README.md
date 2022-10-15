@@ -1,5 +1,5 @@
 # borealis-data-www
-Jekyll site generator for Borealis Data Solutions WWW site.
+Jekyll site generator for Boreal Information Systems Inc. WWW site.
 
 To run locally:
 
