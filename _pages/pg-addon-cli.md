@@ -100,7 +100,7 @@ And to see a list of all installed PostgreSQL extensions, use the `borealis-pg:e
 $ heroku borealis-pg:extensions --app sushi
 ```
 
-A list of PostgreSQL extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support).
+A list of PostgreSQL extensions that are supported by Borealis Isolated Postgres may be found [here](./pg-extensions-support). [x](#data-integrations)
 
 #### Database users
 
@@ -117,6 +117,26 @@ $ heroku borealis-pg:users:reset --app sushi
 ```
 
 A full database credentials reset will generate new usernames and passwords for the Heroku app's read/write and read-only user roles. The previous Heroku app user credentials will continue to remain valid for several minutes afterward to ensure there is an overlap between them to prevent application downtime. All personal database user roles will be deactivated, but the next time an affected user executes one of the `borealis-pg:psql` or `borealis-pg:tunnel` commands (or `borealis-pg:run` with the `--personal-user` option), their database user roles will be reactivated and new credentials will be generated. No database objects (tables, views, indexes, etc.) or table data will be lost during a full database credentials reset.
+
+#### Data integrations
+
+Data integrations allow third party services to access an add-on database via a secure tunnel using semi-permanent SSH server and database credentials. Typical uses include extract, transform and load (ETL) services and data warehouses. To register a new data integration, provide the service's SSH public key to the `borealis-pg:integrations:register` command:
+
+```shell
+$ heroku borealis-pg:integrations:register --app sushi --name my_integration1 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMWSUPTT31YQ/vO2dNhtP4TAJqaFne6paL3ibYHk2Iy7'
+```
+
+Run the `borealis-pg:integrations:remove` command to deregister/remove a data integration that is no longer needed:
+
+```shell
+$ heroku borealis-pg:integrations:remove --app sushi --name my_integration1
+```
+
+And to see a list of registered data integrations, run the `borealis-pg:integrations` command:
+
+```shell
+$ heroku borealis-pg:integrations --app sushi
+```
 
 ## Updates
 
