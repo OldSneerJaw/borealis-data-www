@@ -118,6 +118,30 @@ $ heroku borealis-pg:users:reset --app sushi
 
 A full database credentials reset will generate new usernames and passwords for the Heroku app's read/write and read-only user roles. The previous Heroku app user credentials will continue to remain valid for several minutes afterward to ensure there is an overlap between them to prevent application downtime. All personal database user roles will be deactivated, but the next time an affected user executes one of the `borealis-pg:psql` or `borealis-pg:tunnel` commands (or `borealis-pg:run` with the `--personal-user` option), their database user roles will be reactivated and new credentials will be generated. No database objects (tables, views, indexes, etc.) or table data will be lost during a full database credentials reset.
 
+#### Database restore and clone
+
+Single tenant databases allow point-in-time restoration and cloning. Point-in-time restoration is meant for disaster recovery and cloning is typically useful for creating an up-to-date copy of a production database for staging, testing, development, etc. In either case, a new add-on is created to store the restored/cloned data, leaving the original database unmodified and unaffected. Both operations are performed by the `heroku borealis-pg:restore:execute` command.
+
+To determine what time range is currently supported for a point-in-time restore, use the `borealis-pg:restore:capabilities` command:
+
+```shell
+$ heroku borealis-pg:restore:capabilities --app sushi
+```
+
+To restore to a specific point in time with a different add-on plan and wait for it to finish:
+
+```shell
+$ heroku borealis-pg:restore:execute --app sushi --new-plan x2-s200-p2-r16 --restore-to-time 2023-03-06T19:31:41.109-05:00 --wait
+```
+
+To create an up-to-date clone attached to a different Heroku app:
+
+```shell
+$ heroku borealis-pg:restore:execute --app sushi --destination-app my-other-app
+```
+
+The time to clone an add-on database is typically around 10-15 minutes and does not change with the amount of data stored in the source add-on database. However, the time to complete a restore operation does scale roughly proportionally by the amount of data stored in the source add-on database.
+
 #### Data integrations
 
 Data integrations allow third party services to access an add-on database via a secure tunnel using semi-permanent SSH server and database credentials. Typical uses include extract, transform and load (ETL) services and data warehouses. To register a new data integration, provide the service's SSH public key to the `borealis-pg:integrations:register` command:
