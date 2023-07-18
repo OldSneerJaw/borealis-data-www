@@ -61,3 +61,4 @@ The following list of [PostgreSQL extensions](https://www.postgresql.org/docs/14
 - [tsm_system_time](https://www.postgresql.org/docs/14/tsm-system-time.html)
 - [unaccent](https://www.postgresql.org/docs/14/unaccent.html)
 - [uuid-ossp](https://www.postgresql.org/docs/14/uuid-ossp.html)
+- [vector](https://github.com/pgvector/pgvector) (not available on PostgreSQL 11)
